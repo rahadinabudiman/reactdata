@@ -82,12 +82,24 @@ export default class MainMenu extends Component {
     })
   }
 
+  hapusData = (id) => {
+    const DataSebelumnya = this.state.datas
+      .filter((data) => data.id !== id)
+      .map((filterData) => {
+        return filterData;
+      });
+
+    this.setState({
+      datas: DataSebelumnya
+    })
+  }
+
   render() {
     return (
       <div>
         <NavBar />
         <div className="container mt-4">
-          <TableData datas={this.state.datas} editData={this.editData} />
+          <TableData datas={this.state.datas} editData={this.editData} hapusData={this.hapusData} />
           <FormInput {...this.state} handleChangeEvent={this.handleChangeEvent} handleSubmitEvent={this.handleSubmitEvent} />
         </div>
       </div>
