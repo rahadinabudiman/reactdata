@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import MainMenu from "./components/index";
+import MainMenu from "./components/CRUD/index";
+// import Product from "./components/Product/Product";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./components/Product/Product.css";
+// import Home from "./components/LifecycleComponents/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
